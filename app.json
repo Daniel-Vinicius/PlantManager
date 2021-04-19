@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "App de gerenciamento de plantas desenvolvido na NLW 5 da Rocketseat. https://nextlevelweek.com/",
+    "githubUrl": "https://github.com/Daniel-Vinicius/PlantManager"
   }
 }
