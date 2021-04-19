@@ -33,7 +33,7 @@ export function Welcome() {
         sempre que precisar.
       </Text>
 
-      <Button title=">" onPress={() => handleChangeTitle("simples")} />
+      <Button title=">" onPress={() => handleChangeTitle("efetiva")} />
     </SafeAreaView>
   );
 }
