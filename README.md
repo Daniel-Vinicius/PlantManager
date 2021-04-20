@@ -56,7 +56,7 @@ $ expo start
 
 App para lembrar sempre de regar suas plantas 🌱
 
-Este é um projeto desenvolvido durante a **[Next Level Week] (https://nextlevelweek.com/)**, apresentado por **[@Rocketseat] (https://github.com/Rocketseat)** durante abril 19-25, 2021.
+Este é um projeto desenvolvido durante a **[Next Level Week](https://nextlevelweek.com/)**, apresentado por **[@Rocketseat](https://github.com/Rocketseat)** durante abril 19-25, 2021.
 
 ## 🔖 Layout
 
@@ -68,6 +68,6 @@ Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para ace
 
 ## 📝 License
 
-Este projeto está licenciado sob a Licença MIT. Veja o [LICENSE](LICENSE.md) para detalhes.
+Este projeto está licenciado sob a Licença MIT. Veja o [LICENSE](LICENSE) para detalhes.
 
 Feito com 💜 por [Daniel Vinícius](https://github.com/Daniel-Vinicius) 👋
