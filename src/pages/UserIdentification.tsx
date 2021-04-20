@@ -50,13 +50,7 @@ export function UserIdentification() {
         style={styles.container}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <TouchableWithoutFeedback
-          onPress={() =>
-            Platform.OS === "ios" || Platform.OS === "android"
-              ? Keyboard.dismiss
-              : () => ""
-          }
-        >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.content}>
             <View style={styles.form}>
               <View style={styles.header}>
