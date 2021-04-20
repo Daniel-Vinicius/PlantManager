@@ -65,7 +65,7 @@ export function UserIdentification() {
                   styles.input,
                   (isFocused || isFilled) && { borderColor: colors.green },
                 ]}
-                placeholder="Digite um nome"
+                placeholder="Digite seu nome"
                 onBlur={handleInputBlur}
                 onFocus={handleInputFocus}
                 onChangeText={handleInputChange}
