@@ -50,7 +50,13 @@ export function UserIdentification() {
         style={styles.container}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <TouchableWithoutFeedback
+          onPress={() =>
+            Platform.OS === "ios" || Platform.OS === "android"
+              ? Keyboard.dismiss
+              : () => ""
+          }
+        >
           <View style={styles.content}>
             <View style={styles.form}>
               <View style={styles.header}>
@@ -69,6 +75,7 @@ export function UserIdentification() {
                 onBlur={handleInputBlur}
                 onFocus={handleInputFocus}
                 onChangeText={handleInputChange}
+                value={name}
               />
               <View style={styles.footer}>
                 <Button title="Confirmar" onPress={handleSubmit} />

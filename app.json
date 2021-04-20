@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "description": "App de gerenciamento de plantas desenvolvido na NLW 5 da Rocketseat. https://nextlevelweek.com/",
+    "description": "🌱 App para lembrar sempre de regar suas plantas 🌱",
     "githubUrl": "https://github.com/Daniel-Vinicius/PlantManager",
     "splash": {
       "image": "./assets/splash.png",
@@ -33,7 +33,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "lang": "pt-br"
     }
   }
 }

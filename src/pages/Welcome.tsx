@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   Dimensions,
   View,
+  Platform,
 } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
@@ -82,7 +83,9 @@ const styles = StyleSheet.create({
     fontFamily: fonts.text,
   },
   image: {
-    height: Dimensions.get("window").width * 0.7,
+    height:
+      Platform.OS === "web" ? "300px" : Dimensions.get("window").width * 0.7,
+    width: Platform.OS === "web" ? "300px" : "inherit",
   },
   button: {
     backgroundColor: colors.green,
