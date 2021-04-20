@@ -34,8 +34,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Expo](https://expo.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 
----
-
 ## 🚀 Começando
 
 Clone o projeto e acesse a pasta
@@ -54,15 +52,11 @@ $ yarn install
 $ expo start
 ```
 
----
-
 ## 💻 Projeto
 
 App para lembrar sempre de regar suas plantas 🌱
 
 Este é um projeto desenvolvido durante a **[Next Level Week] (https://nextlevelweek.com/)**, apresentado por **[@Rocketseat] (https://github.com/Rocketseat)** durante abril 19-25, 2021.
-
----
 
 ## 🔖 Layout
 
@@ -72,12 +66,8 @@ Você pode visualizar o layout do projeto através do link abaixo:
 
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
----
-
 ## 📝 License
 
 Este projeto está licenciado sob a Licença MIT. Veja o [LICENSE](LICENSE.md) para detalhes.
-
----
 
 Feito com 💜 por [Daniel Vinícius](https://github.com/Daniel-Vinicius) 👋
