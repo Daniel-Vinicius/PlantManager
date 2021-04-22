@@ -44,7 +44,6 @@ export function PlantSelect() {
 
   const [page, setPage] = useState(1);
   const [loadingMorePages, setLoadingMorePages] = useState(false);
-  const [loadedAllPages, setLoadedAllPages] = useState(false);
 
   function handleEnvironmentSelected(environment: string) {
     setEnvironmentSelected(environment);
@@ -61,9 +60,13 @@ export function PlantSelect() {
   }
 
   async function fetchPlants() {
-    const { data } = await api.get(
+    const { data } = await api.get<PlantsProps[]>(
       `plants?_sort=name&_order=asc&_page=${page}&_limit=8`
     );
+
+    if (data.length === 0) {
+      setPage((oldValue) => oldValue - 1);
+    }
 
     if (!data) {
       setLoading(true);
@@ -109,6 +112,10 @@ export function PlantSelect() {
   useEffect(() => {
     fetchPlants();
   }, []);
+
+  useEffect(() => {
+    console.log(page);
+  }, [page]);
 
   if (loading) {
     return <Load />;

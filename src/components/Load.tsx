@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { StyleSheet, View } from "react-native";
 
@@ -12,9 +12,13 @@ import { ApiError } from "../components/ApiError";
 export function Load() {
   const [timeoutLoading, setTimeoutLoading] = useState(false);
 
-  setTimeout(() => {
-    setTimeoutLoading(true);
-  }, 10000);
+  useEffect(() => {
+    const timeoutLoading = setTimeout(() => {
+      setTimeoutLoading(true);
+    }, 10000);
+
+    return () => clearTimeout(timeoutLoading);
+  }, []);
 
   if (timeoutLoading) {
     return <ApiError />;
