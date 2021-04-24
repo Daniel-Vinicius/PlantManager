@@ -20,13 +20,13 @@ export default function App() {
 
   useEffect(() => {
     // Ouvir a Notificação
-    const subscription = Notifications.addNotificationReceivedListener(
-      async (notification) => {
-        const data = notification.request.content.data.plant as PlantProps;
-        console.log(data);
-      }
-    );
-    return () => subscription.remove();
+    // const subscription = Notifications.addNotificationReceivedListener(
+    //   async (notification) => {
+    //     const data = notification.request.content.data.plant as PlantProps;
+    //     console.log(data);
+    //   }
+    // );
+    // return () => subscription.remove();
     /* async function notifications() {
       // Remove todas as Notificações
       // await Notifications.cancelAllScheduledNotificationsAsync();
