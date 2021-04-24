@@ -9,7 +9,7 @@ import {
 
 import { useNavigation } from "@react-navigation/core";
 
-import { PlantsProps } from "../libs/storage";
+import { PlantProps } from "../libs/storage";
 import api from "../services/api";
 
 import colors from "../styles/colors";
@@ -28,8 +28,8 @@ interface EnvironmentProps {
 export function PlantSelect() {
   const navigation = useNavigation();
   const [environments, setEnvironments] = useState<EnvironmentProps[]>([]);
-  const [plants, setPlants] = useState<PlantsProps[]>([]);
-  const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>([]);
+  const [plants, setPlants] = useState<PlantProps[]>([]);
+  const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([]);
   const [environmentSelected, setEnvironmentSelected] = useState("all");
   const [loading, setLoading] = useState(true);
 
@@ -52,16 +52,16 @@ export function PlantSelect() {
   }
 
   async function fetchPlants() {
-    const { data } = await api.get<PlantsProps[]>(
+    const { data } = await api.get<PlantProps[]>(
       `plants?_sort=name&_order=asc&_page=${page}&_limit=8`
     );
 
-    if (data.length === 0) {
-      setPage((oldValue) => oldValue - 1);
-    }
-
     if (!data) {
       setLoading(true);
+    }
+
+    if (data.length === 0) {
+      setPage((oldValue) => oldValue - 1);
     }
 
     if (page > 1) {
@@ -84,7 +84,7 @@ export function PlantSelect() {
     fetchPlants();
   }
 
-  function handlePlantSelect(plant: PlantsProps) {
+  function handlePlantSelect(plant: PlantProps) {
     navigation.navigate("PlantSave", { plant });
   }
 
@@ -109,9 +109,9 @@ export function PlantSelect() {
     fetchPlants();
   }, []);
 
-  useEffect(() => {
-    console.log(filteredPlants.length);
-  }, [filteredPlants.length]);
+  // useEffect(() => {
+  //   console.log(filteredPlants.length);
+  // }, [filteredPlants.length]);
 
   if (loading) {
     return <Load />;
