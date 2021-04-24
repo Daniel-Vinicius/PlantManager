@@ -1,7 +1,11 @@
 import axios from "axios";
 
+let url = "https://my-json-server.typicode.com/Daniel-Vinicius/PlantManager";
+
+let urlDev = "http://localhost:3333";
+
 const api = axios.create({
-  baseURL: "http://192.168.2.169:3333",
+  baseURL: url,
 });
 
 export default api;

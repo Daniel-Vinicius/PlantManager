@@ -6,8 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "fake-api-dev": "json-server ./src/services/server.json --host 192.168.2.169 --port 3333 --delay 500",
-    "fake-api-test": "json-server db.json --port 3333"
+    "fake-api": "json-server ./src/services/server.json --host 192.168.2.169 --port 3333 --delay 500"
   },
   "dependencies": {
     "@expo-google-fonts/jost": "^0.1.0",
@@ -42,6 +41,5 @@
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0"
-  },
-  "private": true
+  }
 }
