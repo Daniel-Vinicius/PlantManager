@@ -49,6 +49,7 @@ export function UserIdentification() {
 
     try {
       await AsyncStorage.setItem("@plantmanager:user", name);
+      await AsyncStorage.setItem("@plantmanager:help", "true");
 
       navigation.navigate("Confirmation", {
         title: "Prontinho",
