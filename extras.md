@@ -1,11 +1,10 @@
-Welcome só se for a primeira vez que o usuário entra no App, nome e foto dinâmicos
+## Welcome só se for a primeira vez que o usuário entra no App
 
-expo install @react-native-async-storage/async-storage
+- https://react-native-async-storage.github.io/async-storage/docs/usage/
 
-https://react-native-async-storage.github.io/async-storage/docs/usage/
+Salvar um valor boolean se o user viu a tela welcome e fazer renderização condicional em routes.ts.
 
-salvar um valor objeto com o nome, a foto e um valor boolean se o user viu a tela welcome e fazer renderização condicional em routes.ts.
+## Foto Upload:
 
-criar um input pra foto.
-
-consumir isso no header.
+- https://docs.expo.io/versions/latest/sdk/imagepicker/
+- https://snack.expo.io/@danielviana/image-picker
