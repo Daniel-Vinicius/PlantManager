@@ -66,6 +66,10 @@ export function PlantSave() {
 
   async function handleSavePlant() {
     // console.log(subHours(selectedDateTime, 3));
+    if (selectedDateTime && isBefore(selectedDateTime, new Date())) {
+      setSelectedDateTime(new Date());
+      return Alert.alert("Escolha uma hora no futuro! ⏰");
+    }
     try {
       await savePlant({
         ...plant,

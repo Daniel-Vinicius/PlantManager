@@ -16,12 +16,15 @@ import {
   Alert,
 } from "react-native";
 
+import { useUser } from "../contexts/User";
+
 import { Button } from "../components/Button";
 
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
 export function UserIdentification() {
+  const { changeName } = useUser();
   const navigation = useNavigation();
 
   const [isFocused, setIsFocused] = useState(false);
@@ -49,6 +52,7 @@ export function UserIdentification() {
 
     try {
       await AsyncStorage.setItem("@plantmanager:user", name);
+      changeName(name);
       await AsyncStorage.setItem("@plantmanager:help", "true");
 
       navigation.navigate("Confirmation", {
