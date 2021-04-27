@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import AppLoading from "expo-app-loading";
-import * as Notifications from "expo-notifications";
-
-import { PlantProps } from "./src/libs/storage";
+// import * as Notifications from "expo-notifications";
+import { clearStorage } from "./src/libs/storage";
+// import { PlantProps } from "./src/libs/storage";
 
 import Routes from "./src/routes";
 
@@ -18,16 +18,16 @@ export default function App() {
     Jost_600SemiBold,
   });
 
-  useEffect(() => {
-    // Ouvir a Notificação
-    // const subscription = Notifications.addNotificationReceivedListener(
-    //   async (notification) => {
-    //     const data = notification.request.content.data.plant as PlantProps;
-    //     console.log(data);
-    //   }
-    // );
-    // return () => subscription.remove();
-    /* async function notifications() {
+  // useEffect(() => {
+  // Ouvir a Notificação
+  // const subscription = Notifications.addNotificationReceivedListener(
+  //   async (notification) => {
+  //     const data = notification.request.content.data.plant as PlantProps;
+  //     console.log(data);
+  //   }
+  // );
+  // return () => subscription.remove();
+  /* async function notifications() {
       // Remove todas as Notificações
       // await Notifications.cancelAllScheduledNotificationsAsync();
       // Busca todas as Notificações
@@ -36,8 +36,16 @@ export default function App() {
       // console.log(data);
     }
     */
-    // notifications();
-  }, []);
+  // notifications();
+  // }, []);
+
+  // useEffect(() => {
+  //   async function clearStorageAsync() {
+  //     await clearStorage();
+  //   }
+
+  //   clearStorageAsync();
+  // }, []);
 
   if (!fontsLoaded) {
     return <AppLoading />;

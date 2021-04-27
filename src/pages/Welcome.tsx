@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useNavigation } from "@react-navigation/core";
-import { clearPlants } from "../libs/storage";
 
 import {
   Text,
@@ -24,12 +23,6 @@ export function Welcome() {
   const navigation = useNavigation();
 
   function handleStart() {
-    async function clearPlantsAsync() {
-      await clearPlants();
-    }
-
-    // clearPlantsAsync();
-
     navigation.navigate("UserIdentification");
   }
 

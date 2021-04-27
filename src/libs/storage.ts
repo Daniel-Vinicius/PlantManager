@@ -119,7 +119,7 @@ export async function removePlant(id: string): Promise<void> {
   await AsyncStorage.setItem("@plantmanager:plants", JSON.stringify(plants));
 }
 
-export async function clearPlants(): Promise<void> {
+export async function clearStorage(): Promise<void> {
   try {
     await AsyncStorage.clear();
   } catch (error) {
