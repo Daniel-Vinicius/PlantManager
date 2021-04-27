@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AppLoading from "expo-app-loading";
 // import * as Notifications from "expo-notifications";
-import { clearStorage } from "./src/libs/storage";
+
+// import { clearStorage } from "./src/libs/storage";
 // import { PlantProps } from "./src/libs/storage";
+
+import AppProvider from "./src/contexts";
 
 import Routes from "./src/routes";
 
@@ -27,16 +30,16 @@ export default function App() {
   //   }
   // );
   // return () => subscription.remove();
-  /* async function notifications() {
-      // Remove todas as Notificações
-      // await Notifications.cancelAllScheduledNotificationsAsync();
-      // Busca todas as Notificações
-      // const data = await Notifications.getAllScheduledNotificationsAsync();
-      // console.log("#### NOTIFICAÇÕES ####");
-      // console.log(data);
-    }
-    */
-  // notifications();
+  //   async function notifications() {
+  //     // Remove todas as Notificações
+  //     await Notifications.cancelAllScheduledNotificationsAsync();
+  //     // Busca todas as Notificações
+  //     const data = await Notifications.getAllScheduledNotificationsAsync();
+  //     console.log("#### NOTIFICAÇÕES ####");
+  //     console.log(data);
+  //   }
+
+  //   notifications();
   // }, []);
 
   // useEffect(() => {
@@ -51,5 +54,9 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return <Routes />;
+  return (
+    <AppProvider>
+      <Routes />
+    </AppProvider>
+  );
 }
