@@ -109,10 +109,6 @@ export function PlantSelect() {
     fetchPlants();
   }, []);
 
-  // useEffect(() => {
-  //   console.log(filteredPlants.length);
-  // }, [filteredPlants.length]);
-
   if (loading) {
     return <Load />;
   }

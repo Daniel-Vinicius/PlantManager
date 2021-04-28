@@ -37,8 +37,9 @@ const AppRoutes: React.FC = () => {
           component={UserIdentification}
         />
       )}
-
-      <stackRoutes.Screen name="Confirmation" component={Confirmation} />
+      {!userHelp && (
+        <stackRoutes.Screen name="Confirmation" component={Confirmation} />
+      )}
 
       <stackRoutes.Screen name="PlantSelect" component={AuthRoutes} />
       <stackRoutes.Screen name="PlantSave" component={PlantSave} />
