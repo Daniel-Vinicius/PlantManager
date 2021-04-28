@@ -35,6 +35,7 @@ export function Header({ title, subtitle }: HeaderProps) {
     );
     if (status !== "granted") {
       Alert.alert("É preciso aceitar as permissões para trocar a foto. 😥");
+      return;
     }
 
     const result = await ImagePicker.launchImageLibraryAsync({
